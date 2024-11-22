@@ -1,6 +1,9 @@
 <?php
 require 'vendor/autoload.php'; // Include the Dompdf library
 
+
+
+
 use Dompdf\Dompdf;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["gedicht"])) {
@@ -49,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["gedicht"])) {
 
     // Split the message into individual characters
     $characters = str_split($message);
-    
+
     foreach ($characters as $character) {
         if ($character === ' ') {
             // Handle spaces
